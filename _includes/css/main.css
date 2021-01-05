@@ -6,6 +6,8 @@
 
 body {
     overflow-x: hidden;
+    /* color: #{{ site.color.text-color }}; */
+    background: #{{ site.color.secondary-light }};
 }
 
 p {
@@ -48,7 +50,7 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-hr.star-primary:after {
+/* hr.star-primary:after {
     content: "\f005";
     display: inline-block;
     position: relative;
@@ -56,14 +58,14 @@ hr.star-primary:after {
     padding: 0 .25em;
     font-family: FontAwesome;
     font-size: 2em;
-}
+} */
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #{{ site.color.text-color }};
 }
 
 hr.star-light:after {
-    color: #fff;
+    color: #{{ site.color.text-color }};
     background-color: #{{ site.color.primary }};
 }
 
@@ -80,9 +82,14 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+.youtube-centered {
+    width: 800px; /* you have to have a size or this method doesn't work */
+    height: 400px; /* think about making these max-width instead - might give you some more responsiveness */
+}
+
 header {
     text-align: center;
-    color: #fff;
+    color: #{{ site.color.text-color }};
     background: #{{ site.color.primary }};
 }
 
@@ -181,8 +188,11 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
-    background: #{{ site.color.primary }};
+    color: #{{ site.color.text-color }};
+    /* color: #5cdb95; */
+    /* background: #{{ site.color.primary }}; */
+
+    background: #{{ site.color.secondary }};
 }
 
 @media(max-width:767px) {
@@ -230,7 +240,7 @@ section.success {
     margin-top: -12px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #{{ site.color.text-color }};
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -243,6 +253,62 @@ section.success {
 }
 
 #portfolio * {
+    z-index: 2;
+}
+
+#portfolio-art {
+    color: #{{ site.color.text-color }};
+    background: #{{ site.color.primary }};
+}
+
+#portfolio-art .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio-art .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio-art .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba({{ site.color.primary-rgb }},.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio-art .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+#portfolio-art .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #{{ site.color.text-color }};;
+}
+
+#portfolio-art .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#portfolio-art .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio-art .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#portfolio-art * {
     z-index: 2;
 }
 
@@ -281,9 +347,9 @@ section.success {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #{{ site.color.text-color }};
     font-size: 20px;
-    color: #fff;
+    color: #{{ site.color.text-color }};
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -292,7 +358,7 @@ section.success {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
+    border: solid 2px #{{ site.color.text-color }};
     color: #{{ site.color.primary }};
     background: #fff;
 }
@@ -301,7 +367,7 @@ section.success {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .floating-label-form-group input,
@@ -350,11 +416,11 @@ section.success {
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgb(0, 0, 0);
 }
 
 footer {
-    color: #fff;
+    color: #{{ site.color.text-color }};
 }
 
 footer h3 {
@@ -379,7 +445,7 @@ footer .footer-below {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid #{{ site.color.text-color }};
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
@@ -412,6 +478,8 @@ footer .footer-below {
 .scroll-top .btn:focus {
     outline: 0;
 }
+
+
 
 .portfolio-modal .modal-content {
     padding: 100px 0;
