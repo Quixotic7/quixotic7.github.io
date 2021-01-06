@@ -312,6 +312,10 @@ section.success {
     z-index: 2;
 }
 
+#portfolio-post-content {
+    text-align: left;
+}
+
 @media(min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;

@@ -1,0 +1,24 @@
+---
+layout: default
+modal-id: 5
+date: 2019-07-14
+img: novagon.png
+youtube: 3M7_Fx5TQeg
+alt: image-alt
+project-date: July 2019
+client: Personal
+category: code
+description: 
+---
+
+Novagon is a VR polygonal 3d modelling program I made for fun for Oculus/Vive and Quest. 
+
+For the mesh structure, I used a version of Probuilder which I had to modify a bit to do the real-time operations I needed and I implemented a UI for changing tool modes and performing operations. After a number of iterations I found that using pie menus work really well for this as opposed to a standard point and click menu. 
+
+Selecting mesh elements in VR was a challenge. I had to implement a number of algorithms to find the intersection between triangles and edges in order to determine which mesh elements should be selected. I also had to keep track of which elements were selected in order to perform mesh operations like extrude, bridge, and edge loops. 
+
+The most difficult tool to implement was the knife tool, but I really like how it turned out. 
+
+I also implemented in a undo / redo system which kept track of incremental changes, this was incredibly tricky to make work correctly, and one mistake could end up completely mangling the mesh. 
+
+I would love to further develop this project into a complete VR software package!

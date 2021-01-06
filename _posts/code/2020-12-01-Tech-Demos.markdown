@@ -1,10 +1,10 @@
 ---
 layout: default
 modal-id: 6
-date: 2014-07-15
-img: submarine.png
+date: 2020-12-01
+img: thtechdemos.png
 alt: image-alt
-project-date: April 2014
+project-date: Dec 2020
 client: Start Bootstrap
 youtube: 3wfiRSzBQ7I
 category: code
