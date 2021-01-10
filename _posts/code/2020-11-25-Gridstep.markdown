@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 10
+date: 2020-11-25
+img: gridstep.png
+alt: image-alt
+project-date: Nov 2020
+client: Personal
+youtube: 3wfiRSzBQ7I
+category: code
+description: Tested.com tries latest Tactical Haptics Tech demos
+---
